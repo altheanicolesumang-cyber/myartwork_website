@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Contact</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#000;
+    color:#fff;
+
+    /* PAGE FADE */
+    animation:pageFade 0.8s ease;
+}
+
+/* NAVBAR */
+nav{
+    background:#FFD700;
+    padding:15px;
+    text-align:center;
+}
+
+nav a{
+    color:#000;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:bold;
+	transition:0.3s;
+}
+	
+nav a:hover{
+text-decoration:underline;
+background:#000;
+color:#FFD700;
+padding:5px 10px;
+border-radius:8px;
+cursor:pointer;
+}
+
+nav a:hover{
+    text-decoration:underline;
+}
+
+/* CONTACT SECTION */
+.contact-section{
+    padding:60px 40px;
+    max-width:700px;
+    margin:0 auto;
+
+    animation:fadeUp 1s ease;
+}
+
+.contact-section h1{
+    color:#FFD700;
+    margin-bottom:30px;
+    font-size:38px;
+    text-align:center;
+
+    animation:fadeUp 1.2s ease;
+}
+
+/* FORM */
+.contact-form{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+
+    animation:fadeUp 1.4s ease;
+}
+
+.contact-form input,
+.contact-form textarea{
+    padding:12px;
+    border-radius:8px;
+    border:2px solid #FFD700;
+    background:#111;
+    color:#fff;
+    font-size:16px;
+    resize:none;
+
+    transition:0.3s;
+}
+
+/* INPUT FOCUS EFFECT */
+.contact-form input:focus,
+.contact-form textarea:focus{
+    outline:none;
+    border-color:#FFD700;
+    box-shadow:0 0 10px #FFD700;
+    transform:scale(1.02);
+}
+
+/* BUTTON */
+.contact-form button{
+    padding:12px;
+    background:#FFD700;
+    color:#000;
+    font-weight:bold;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+
+    /* GLOW */
+    animation:glow 2s infinite alternate;
+    transition:0.3s;
+}
+
+.contact-form button:hover{
+    background:#e6c200;
+    transform:scale(1.05);
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:15px;
+    background:#FFD700;
+    color:#000;
+    font-weight:bold;
+    margin-top:40px;
+
+    animation:fadeUp 1.6s ease;
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes glow{
+    from{box-shadow:0 0 8px #FFD700;}
+    to{box-shadow:0 0 20px #FFD700;}
+}
+
+@keyframes pageFade{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+
+@media (max-width:600px){
+    .contact-section { padding:40px 20px; }
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="gallery.html">Gallery</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+<section class="contact-section">
+
+<h1>Contact Me</h1>
+
+<form class="contact-form" action="#" method="post">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+</form>
+
+</section>
+
+<footer>
+© 2026 My Artwork Collection | Designed by Althea Nicole Sumang
+</footer>
+
+</body>
+</html>

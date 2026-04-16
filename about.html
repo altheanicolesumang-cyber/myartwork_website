@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>About</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:#000;
+color:#fff;
+}
+
+/* NAVBAR */
+nav{
+background:#FFD700;
+padding:15px;
+text-align:center;
+}
+
+/* LINKS */
+nav a{
+color:#000;
+text-decoration:none;
+margin:0 15px;
+font-weight:bold;
+transition:0.3s;
+}
+
+/* ✅ THIS IS THE "TOUCH / HOVER EFFECT" */
+nav a:hover{
+text-decoration:underline;
+background:#000;
+color:#FFD700;
+padding:5px 10px;
+border-radius:8px;
+cursor:pointer;
+}
+
+/* ANIMATION */
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(25px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* ABOUT SECTION */
+.about{
+display:flex;
+flex-wrap:wrap;
+align-items:center;
+justify-content:center;
+padding:80px 40px;
+gap:50px;
+animation:fadeUp 1s ease;
+}
+
+.about-img{
+width:250px;
+height:250px;
+border-radius:50%;
+border:4px solid #FFD700;
+object-fit:cover;
+animation:fadeUp 1.2s ease;
+}
+
+.about-text{
+max-width:500px;
+animation:fadeUp 1.4s ease;
+}
+
+.about-text h1{
+color:#FFD700;
+font-size:38px;
+margin-bottom:15px;
+}
+
+.about-text p{
+color:#ddd;
+line-height:1.6;
+font-size:17px;
+}
+
+/* RESUME BUTTON */
+.resume-btn{
+display:inline-block;
+margin-top:10px;
+padding:12px 25px;
+background:#FFD700;
+color:#000;
+font-weight:bold;
+text-decoration:none;
+border-radius:25px;
+box-shadow:0 0 10px #FFD700;
+transition:0.3s;
+animation:glow 2s infinite alternate;
+}
+
+.resume-btn:hover{
+transform:scale(1.05);
+}
+
+@keyframes glow{
+from{ box-shadow:0 0 10px #FFD700; }
+to{ box-shadow:0 0 20px #FFD700; }
+}
+
+/* SKILLS */
+.skills{
+padding:60px 40px;
+text-align:center;
+animation:fadeUp 1.6s ease;
+}
+
+.skills h2{
+color:#FFD700;
+margin-bottom:30px;
+}
+
+.skills-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+}
+
+.skill-card{
+background:#111;
+border:2px solid #FFD700;
+border-radius:12px;
+padding:25px;
+transition:0.3s;
+animation:fadeUp 1.8s ease;
+}
+
+.skill-card:hover{
+transform:translateY(-8px);
+box-shadow:0 0 15px #FFD700;
+}
+
+.skill-card h3{
+color:#FFD700;
+margin-bottom:10px;
+}
+
+.skill-card p{
+font-size:14px;
+color:#ccc;
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:15px;
+background:#FFD700;
+color:#000;
+font-weight:bold;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="gallery.html">Gallery</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+<!-- ABOUT -->
+<section class="about">
+
+<img src="IMG_8646.jpg" class="about-img">
+
+<div class="about-text">
+
+<h1>About Me</h1>
+
+<p>
+I am Althea Nicole Sumang, a Deaf creative and a second-year student in Visual Media Arts (VMA) at Benilde. I like creating meaningful and creative work while exploring graphic design, video, drawing, and visual storytelling with a fresh Gen Z perspective.</p>
+
+<p>
+Studying VMA has helped me grow not only in my skills but also as a person. Through my art, I express what words alone cannot and share my ideas and feelings through visuals.</p>
+
+<p>
+In this portfolio, you will see projects that show my growth in VMA.
+	</p>
+
+<a href="resume.pdf" target="_blank" class="resume-btn">
+View My Resume
+</a>
+
+</div>
+
+</section>
+
+<!-- SKILLS -->
+<section class="skills">
+
+<h2>My Skills</h2>
+
+<div class="skills-grid">
+
+<div class="skill-card">
+<h3>Illustrator</h3>
+<p>Digital and traditional illustration techniques.</p>
+</div>
+
+<div class="skill-card">
+<h3>Graphic Designer</h3>
+<p>Creating visual branding and layouts.</p>
+</div>
+
+<div class="skill-card">
+<h3>Digital Artist</h3>
+<p>Creating digital artworks.</p>
+</div>
+
+<div class="skill-card">
+<h3>Photographer</h3>
+<p>Capturing visual stories.</p>
+</div>
+
+<div class="skill-card">
+<h3>Web Designer</h3>
+<p>Designing websites.</p>
+</div>
+
+<div class="skill-card">
+<h3>Editing</h3>
+<p>Photo and video editing.</p>
+</div>
+
+<div class="skill-card">
+<h3>Content Creator</h3>
+<p>Creative online content.</p>
+</div>
+
+<div class="skill-card">
+<h3>Drawing</h3>
+<p>Hand-drawn artwork.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+© 2026 My Artwork Collection | Designed by Althea Nicole Sumang
+</footer>
+
+</body>
+</html>

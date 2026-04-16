@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Artwork Website</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#000;
+    color:#fff;
+
+    /* PAGE FADE IN */
+    opacity:1;
+    transition:opacity 0.6s ease;
+}
+
+/* NAVBAR */
+nav{
+    background:#FFD700;
+    padding:15px;
+    text-align:center;
+}
+
+nav a{
+    color:#000;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:bold;
+	transition:0.3s;
+}
+	
+nav a:hover{
+text-decoration:underline;
+background:#000;
+color:#FFD700;
+padding:5px 10px;
+border-radius:8px;
+cursor:pointer;
+}
+
+/* HERO */
+.hero{
+    text-align:center;
+    padding:120px 20px;
+
+    /* ANIMATION */
+    animation:fadeUp 1s ease;
+}
+
+.hero h1{
+    font-size:48px;
+    color:#FFD700;
+}
+
+.hero p{
+    font-size:18px;
+    color:#ddd;
+    max-width:650px;
+    margin:auto;
+}
+
+/* BUTTON */
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:12px 25px;
+    background:#FFD700;
+    color:#000;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:25px;
+
+    animation:glow 2s infinite alternate;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+}
+
+/* STATEMENT */
+.statement{
+    margin:60px auto;
+    max-width:750px;
+    padding:30px;
+    border:2px solid #FFD700;
+    border-radius:12px;
+    text-align:center;
+
+    animation:fadeUp 1.3s ease;
+}
+
+.statement h2{
+    color:#FFD700;
+}
+
+.statement p{
+    color:#ccc;
+    line-height:1.6;
+}
+
+/* EXPLORE */
+.explore{
+    text-align:center;
+    padding:30px;
+
+    animation:fadeUp 1.6s ease;
+}
+
+.explore span{
+    color:#FFD700;
+    font-weight:bold;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:15px;
+    background:#FFD700;
+    color:#000;
+    font-weight:bold;
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes glow{
+    from{
+        box-shadow:0 0 8px #FFD700;
+    }
+    to{
+        box-shadow:0 0 20px #FFD700;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="gallery.html">Gallery</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+<h1>Hello, I’m Althea</h1>
+
+<p>
+A Deaf Visual Media Arts student passionate about storytelling through design,
+illustration, and digital creativity.
+</p>
+
+<a href="about.html" class="btn" onclick="goPage(event, this.href)">
+Learn More About Me
+</a>
+
+</section>
+
+<!-- STATEMENT -->
+<section class="statement">
+
+<h2>Creative Statement</h2>
+
+<p>
+This portfolio presents my journey as a Visual Media Arts student,
+showcasing my growth in design, storytelling, and digital creativity.
+</p>
+
+</section>
+
+<!-- EXPLORE -->
+<section class="explore">
+
+<p>
+Explore my work through:
+<br>
+<span>About • Gallery • Contact</span>
+</p>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+© 2026 My Artwork Collection | Designed by Althea Nicole Sumang
+</footer>
+
+<!-- PAGE TRANSITION SCRIPT -->
+<script>
+function goPage(event, url){
+    event.preventDefault();
+
+    document.body.style.opacity = "0";
+
+    setTimeout(function(){
+        window.location.href = url;
+    }, 600);
+}
+</script>
+
+</body>
+</html>
